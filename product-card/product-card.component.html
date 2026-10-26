@@ -1,0 +1,8 @@
+
+<div class="productCard">
+<h1>{{product.name}}</h1><br>
+<h3>{{product.description}}</h3><br>
+<h3 style="background-color: yellow;">{{product.price}}</h3>
+
+<h2>מחיר לאחר הנחה: {{ product.price * (1 - product.fatPercentages / 100) }}</h2>
+<h2 *ngIf="product.price - (product.price * (1 - product.fatPercentages / 100)) >= 300">ההנחה משתלמת</h2> </div>
